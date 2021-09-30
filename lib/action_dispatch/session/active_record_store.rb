@@ -155,6 +155,12 @@ module ActionDispatch
       end
 
       def logger
+        p "$$$$$$$$$$$$$$$$$$$$$$$$$$"
+        lgr = ActiveRecord::Base.logger || NilLogger
+        p lgr.inspect
+        p lgr.class
+        p "$$$$$$$$$$$$$$$$$$$$$$$$"
+
         ActiveRecord::Base.logger || NilLogger
       end
 
